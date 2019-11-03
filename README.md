@@ -16,7 +16,7 @@ ROS node and test application for RPLIDAR:
 [rplidar HomePage](http://www.slamtec.com/en/Lidar)  
 [rplidar Tutorial](https://github.com/robopeak/rplidar_ros/wiki)  
 
-#### How to build rplidar ros package
+#### How to build rplidar ros package 
 1) clone this project to your catkin's workspace src folder  
 2) Running catkin_make to build rplidarNode and rplidarNodeClient  
 
@@ -36,4 +36,17 @@ Using Hector SLAM without odometry data on a ROS system with the RPLidar A1.
 
 #### Sources
 [RPLidar](https://github.com/robopeak/rplidar_ros)  
-[Hector_SLAM](https://github.com/tu-darmstadt-ros-pkg/hector_slam)
+[Hector_SLAM](https://github.com/tu-darmstadt-ros-pkg/hector_slam)  
+
+## Map conversion
+After hector_slam, you've got an image file. To active robots, we'll conversion this image file to text file.  
+I conversion like this :  
+contourlines - 2 white places - 0 else - 1  
+You can complie this c file wite gcc complier.  
+
+## Active
+Finally we are ready to active 6 robots. Complie this c file and active robots  
+#### ssh communication
+Before active you will connect 6 robots to PC with ssh communication.  
+BeagleBone Blue have wifi. On PC you will connect 6 BeagleBone Blue manually.
+
