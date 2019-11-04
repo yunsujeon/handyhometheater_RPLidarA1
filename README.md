@@ -41,7 +41,7 @@ Using Hector SLAM without odometry data on a ROS system with the RPLidar A1.
 ## Map conversion
 After hector_slam, you've got an image file. To active robots, we'll conversion this image file to text file.  
 I conversion like this :  
-contourlines - 2 / white places - 0 / else - 1  
+contourlines - 1 / white places - 2 / else - 0  
 You can complie this c file wite gcc complier.  
 
 ## Active
