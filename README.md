@@ -8,7 +8,7 @@ Mapping is executed with rplidar A1 [hector mapping](https://github.com/NickL77/
 When they recognize their location, they'll go their location with three motors and omni wheels.  
 #### Hardware Components
 6 robots  
-PC, Beaglebone Blue, RPLidar A1, omni wheels, motors with encoders, bluetooth speaker, PSD, 18650batteries  
+PC, [Beaglebone Blue](https://github.com/beagleboard/beaglebone-blue), RPLidar A1, omni wheels, motors with encoders, bluetooth speaker, PSD, 18650batteries  
 
 ## RPLIDAR ROS package
 ROS node and test application for RPLIDAR:  
