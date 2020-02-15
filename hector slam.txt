@@ -1,0 +1,63 @@
+hector slam git사이트 : 
+https://github.com/NickL77/RPLidar_Hector_SLAM
+
+1. ros full로 설치
+
+2. 지금 만들어져있는 catkin_ws 지운다
+=>     rm -rf catkin_ws
+
+3. http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
+다시 catkin_ws 만들기
+=>     mkdir -p ~/catkin_ws/src
+
+4. https://github.com/NickL77/RPLidar_Hector_SLAM
+catkin_ws 안에있는 src에 들어간후 clone
+=>     git clone https://github.com/NickL77/RPLidar_Hector_SLAM.git 
+
+catkin_make
+
+5. http://wiki.ros.org/ROS/Tutorials/CreatingPackage 의 4번에 있는 
+=>     . ~/catkin_ws/devel/setup.bash
+source devel/setup.bash
+를 실행시켜 준다. (현재 명령에 대한 업데이트) ******중요******
+
+6. https://github.com/robopeak/rplidar_ros/wiki
+lidar 연결한 후 USB권한 확인
+=>     ls -l /dev |grep ttyUSB (rw----)와 같이 되어있는 것을 볼 수 있다.
+마지막 execute 부분의 ---를 rw-로 바꿔주기 위해서
+=>     sudo chmod 666 /dev/ttyUSB0 
+rw-rw-rw-로 바꼈는지 확인
+=>     ls -l /dev |grep ttyUSB (rw-rw-)와 같이 되어있는 것을 볼 수 있다.
+
+
+7. https://github.com/NickL77/RPLidar_Hector_SLAM
+ catkin_ws 에서 
+=>     roslaunch rplidar_ros rplidar.launch 
+실행시켜 준다. rplidar 활성명령
+
+8. 새로운 터미널 연 후 catkin_ws로 이동
+=>     . ~/catkin_ws/devel/setup.bash
+source devel/setup.bash
+를 실행시켜 준다. (현재 명령에 대한 업데이트) ******중요******
+
+9. 
+=>     roslaunch hector_slam_launch tutorial.launch
+실행하면 rviz를 띄울 수 있다.
+
+
+=================================
+
+
+맵저장
+sudo apt-get install ros-kinetic-map-server
+
+rosrun map_server map_saver -f my_map
+해결해야 할 점 : 
+
+source ~/catkin_ws/devel/setup.bash
+
+컴퓨터에 vnc깔고 열어보기
+
+
+구석탱이 자리잡기
+
